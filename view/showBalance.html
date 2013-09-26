@@ -1,3 +1,9 @@
-<p>R$ {{ balance.value }}</p>
-<p>{{ balance.number }}</p>
-<p>{{ balance.date }}</p>
+<div ng-show="isLoading">
+  <img src="img/loader.gif" alt="" />
+</div>
+
+<div ng-hide="isLoading">
+  <p>R$ {{ balance.value }}</p>
+  <p>{{ balance.number }}</p>
+  <p>{{ balance.date }}</p>
+</div>

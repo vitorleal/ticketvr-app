@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module('ticketVR', ['webStorageModule'])
-            .config(function ($routeProvider, $locationProvider) {
+            .config(function ($routeProvider) {
               $routeProvider
                 .when('/', {
                   controller : 'index',
@@ -75,11 +75,15 @@ app.controller('checkBalance', function($scope, $location) {
 app.controller('showBalance', function($scope, $routeParams, $http) {
     var url = 'https://ticketvr.herokuapp.com/card/' + $routeParams.card;
 
+    $scope.isLoading = true;
+
     $http.get(url)
       .success(function (data, status) {
         $scope.balance = data.balance;
+        $scope.isLoading = false;
       })
       .error(function (data) {
         console.log(data);
+        $scope.isLoading = false;
       });
 });
