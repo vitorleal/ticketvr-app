@@ -1,0 +1,5 @@
+<ul>
+  <li ng-repeat="card in cards">
+    <a ng-click="remove($index)">[X]</a> <a ng-click="showBalance(card.number)">{{ card.type }} - {{ card.number }}</a>
+  </li>
+</ul>
