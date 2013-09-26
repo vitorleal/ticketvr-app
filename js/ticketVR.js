@@ -4,8 +4,8 @@ var app = angular.module('ticketVR', ['webStorageModule'])
             .config(function ($routeProvider, $locationProvider) {
               $routeProvider
                 .when('/', {
-                  controller : 'initialView',
-                  templateUrl: '/view/initialView.html'
+                  controller : 'index',
+                  templateUrl: '/view/index.html'
                 })
                 .when('/myCards', {
                   controller : 'myCards',
@@ -17,7 +17,7 @@ var app = angular.module('ticketVR', ['webStorageModule'])
                 })
                 .when('/checkBalance', {
                   controller : 'checkBalance',
-                  templateUrl: '/view/getBalance.html'
+                  templateUrl: '/view/checkBalance.html'
                 })
                 .when('/showBalance/:card', {
                   controller : 'showBalance',
@@ -27,7 +27,7 @@ var app = angular.module('ticketVR', ['webStorageModule'])
             });
 
 //Initial
-app.controller('initialView', function($scope, $http, webStorage, $location) {
+app.controller('index', function($scope, $http, webStorage, $location) {
 
 });
 
@@ -65,8 +65,8 @@ app.controller('addCard', function($scope, webStorage, $location) {
 
 //Get Balance
 app.controller('checkBalance', function($scope, $location) {
-  $scope.getBalance = function() {
-    $location.path('/showBalance/' + number);
+  $scope.checkBalance = function() {
+    $location.path('/showBalance/' + $scope.card);
   };
 });
 
@@ -77,7 +77,6 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
 
     $http.get(url)
       .success(function (data, status) {
-        console.log(data)
         $scope.balance = data.balance;
       })
       .error(function (data) {
