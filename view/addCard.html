@@ -1,14 +1,11 @@
-<form>
-  <ul>
+<h2>Adicionar cartão</h2>
+<form ng-submit="saveCard()">
+  <ul class="form-list">
     <li>
-      <input type="text" ng-model="newCard" placeholder="0000000000000000">
+      <input ui-mask="9999 9999 9999 9999" required type="text" ng-model="newCard">
     </li>
     <li>
-      <input type="radio" ng-model="type" value="TR"> TR
-      <input type="radio" ng-model="type" value="TA"> TA
-    </li>
-    <li>
-      <button type="button" ng-click="saveCard()">Salvar</button>
+      <button class="button" type="submit">salvar</button>
     </li>
   </ul>
 </form>

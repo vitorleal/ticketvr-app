@@ -1,5 +1,18 @@
-<ul class="options-menu my-cards">
-  <li ng-repeat="card in cards">
-    <a class="remove" ng-click="remove($index)">X</a> <a ng-click="showBalance(card.number)">{{ card.type }} - {{ card.number }}</a>
-  </li>
-</ul>
+<div ng-show="cards.length >= 1">
+  <h2>Meus cartões</h2>
+  <ul class="my-cards">
+    <li ng-repeat="card in cards">
+      <a title="Veja o saldo deste cartão" class="card" ng-click="showBalance(card.number)">
+        <strong>{{ card.number | cardformat }}</strong>
+      </a>
+      <a class="remove" ng-click="remove($index)">X</a>
+    </li>
+  </ul>
+</div>
+
+<div ng-hide="cards.length >= 1">
+  <h2>Você não tem nenhum cartão.</h2>
+  <div class="spacer">
+    <a class="button button-add" href="#/addCard">Adicione um cartão</a>
+  </div>
+</div>

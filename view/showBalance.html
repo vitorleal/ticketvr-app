@@ -1,9 +1,12 @@
-<div ng-show="isLoading">
+<div class="loader-area" ng-show="isLoading">
   <img src="img/loader.gif" alt="" />
 </div>
 
-<div ng-hide="isLoading">
-  <p>R$ {{ balance.value }}</p>
-  <p>{{ balance.number }}</p>
-  <p>{{ balance.date }}</p>
+<div class="balance" ng-hide="error || isLoading" ng-hide="isLoading">
+  <p class="card-number">Cartão: <strong>{{ balance.number | cardformat }}</strong></p>
+  <p class="balance-value">R$ <strong>{{ balance.value }}</strong></p>
+</div>
+
+<div class="error-message" ng-show="error">
+  <h3>{{ error }}</h3>
 </div>

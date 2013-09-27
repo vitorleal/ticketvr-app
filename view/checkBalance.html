@@ -1,4 +1,11 @@
-<form>
-  <input type="text" name="card" ng-model="card" />
-  <button type="submit" ng-click="checkBalance()">Verificar Saldo</button>
+<h2>Verificar saldo</h2>
+<form ng-submit="checkBalance()" class="form-check">
+  <ul class="form-list">
+    <li>
+      <input required ui-mask="9999 9999 9999 9999" type="text" name="card" ng-model="card">
+    </li>
+    <li>
+      <button class="button button-check" type="submit">verificar</button>
+    </li>
+  </ul>
 </form>

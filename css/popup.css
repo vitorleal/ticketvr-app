@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  min-height: 197px;
 }
 
 ul {
@@ -25,6 +26,15 @@ h1 a {
   margin: 0;
   height: 56px;
   text-indent: -100%;
+  outline: none;
+}
+
+h2 {
+  font-size: 16px;
+  color: rgb(17, 31, 75);
+  text-align: center;
+  border-bottom: solid 1px #e5e5e5;
+  padding-bottom: 5px;
 }
 
 a {
@@ -32,17 +42,74 @@ a {
   text-decoration: none;
 }
 
+input[type="text"] {
+  display: block;
+  border: solid 1px rgb(17, 31, 75);;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form, .spacer {
+  padding: 0 20px;
+}
+
+.form-check {
+  margin-bottom: 20px;
+}
+
+.form-check h2 {
+  margin-bottom: 40px;
+}
+
+.button {
+  display: block;
+  border: solid 1px #AD1A20;
+  color: #fff;
+  border-radius: 5px;
+  background: #e31e26;
+  padding: 8px 12px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+.button:hover {
+  background: #ad1a20;
+}
+.button-add {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+
 .options-menu li {
   border-bottom: solid 1px #e5e5e5;
 }
+
+.options-menu li:hover {
+  background: #e5e5e5;
+}
+
 .options-menu a {
   display: block;
   padding: 10px;
   text-align: center;
 }
 
-.my-cards a {
-  display: inline;
+.my-cards li {
+  border-bottom: solid 1px #e5e5e5;
+  padding: 10px;
+  position: relative
+}
+.my-cards li:hover {
+  background: #e5e5e5;
+}
+
+.my-cards .card {
+  cursor: pointer;
+  display: block;
 }
 
 .remove {
@@ -50,10 +117,60 @@ a {
   background: #e31e26;
   color: #fff;
   display: block;
-  padding: 2px 4px 4px 2px;
-  width: 5px;
-  height: 5px;
-  font-size: 9px;
+  padding: 8px 9px 8px 8px;
+  width: 5px; height: 5px;
+  font-size: 10px;
   cursor: pointer;
-  float: right;
+  position: absolute;
+  right: 4px; top: 8px;
+  line-height: 6px;
+}
+
+.remove:hover {
+  background: #ad1a20;
+}
+
+.form-list li {
+  margin: 10px;
+}
+
+.error-message {
+  border-radius: 5px;
+  padding: 27px 30px;
+  text-align: center;
+  background: #FFE5E5;
+  margin: 10px;
+  border: 1px solid #e31e26;
+  color: #e31e26;
+}
+
+.loader-area {
+  position: relative;
+  padding: 27px 30px;
+  margin: 10px;
+}
+
+.loader-area img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+}
+
+.balance {
+  border-radius: 5px;
+  padding: 15px 10px;
+  text-align: center;
+  background: #E5F5FF;
+  margin: 10px;
+  border: 1px solid #1E55E3;
+  color: #1E8CE3;
+}
+
+.balance-value {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.card-number {
+  font-size: 14px;
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('ticketVR', ['webStorageModule'])
+var app = angular.module('ticketVR', ['webStorageModule', 'ui.mask'])
             .config(function ($routeProvider) {
               $routeProvider
                 .when('/', {
@@ -25,6 +25,12 @@ var app = angular.module('ticketVR', ['webStorageModule'])
                 })
                 .otherwise({ redirectTo: '/' });
             });
+
+app.filter('cardformat', function() {
+  return function(card) {
+    return card.match(/.{1,4}/g).join(' ');
+  };
+});
 
 //Initial
 app.controller('index', function($scope, $http, webStorage, $location) {
@@ -53,7 +59,6 @@ app.controller('addCard', function($scope, webStorage, $location) {
       var cards = webStorage.get('cards') || [];
 
       cards.push({
-        type: $scope.type,
         number: $scope.newCard
       });
 
@@ -77,13 +82,23 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
 
     $scope.isLoading = true;
 
-    $http.get(url)
-      .success(function (data, status) {
-        $scope.balance = data.balance;
-        $scope.isLoading = false;
-      })
-      .error(function (data) {
-        console.log(data);
-        $scope.isLoading = false;
-      });
+    if (navigator.onLine) {
+      $http.get(url)
+        .success(function (data, status) {
+          $scope.isLoading = false;
+
+          if (data.error) {
+            $scope.error = data.error;
+          } else {
+            $scope.balance = data.balance;
+          }
+        })
+        .error(function (data) {
+          console.log(data);
+          $scope.isLoading = false;
+        });
+    } else {
+      $scope.isLoading = false;
+      $scope.error     = "Sem conexão"
+    }
 });
