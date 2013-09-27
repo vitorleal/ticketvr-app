@@ -1,5 +1,5 @@
 {
-    "name": "TicketVR",
+    "name": "Ticket Refeição",
     "description": "Verifique o saldo do seu Ticket Refeição",
     "background": {
         "page": "background.html"
