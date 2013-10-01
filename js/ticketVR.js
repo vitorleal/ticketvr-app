@@ -28,7 +28,8 @@ var app = angular.module('ticketVR', ['webStorageModule', 'ui.mask'])
 
 app.filter('cardformat', function() {
   return function(card) {
-    return card.match(/.{1,4}/g).join(' ');
+    var formated = (card) ? card.match(/.{1,4}/g).join(' ') : card;
+    return formated;
   };
 });
 
