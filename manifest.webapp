@@ -15,5 +15,6 @@
         "url": "http://vitorleal.com"
     },
     "installs_allowed_from": ["*"],
-    "default_locale": "pt-BR"
+    "default_locale": "pt-BR",
+    "systemXHR": {}
 }

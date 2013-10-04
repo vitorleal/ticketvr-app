@@ -85,7 +85,11 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
     $scope.isLoading = true;
 
     if (navigator.onLine) {
-      $http.get(url)
+      $http.get(url, {
+        headers: {
+          mozSystem: true
+        }
+      })
         .success(function (data, status) {
           $scope.isLoading = false;
 
