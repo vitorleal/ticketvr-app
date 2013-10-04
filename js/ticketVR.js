@@ -60,7 +60,8 @@ app.controller('addCard', function($scope, webStorage, $location) {
       var cards = webStorage.get('cards') || [];
 
       cards.push({
-        number: $scope.newCard
+        number: $scope.newCard,
+        name  : $scope.cardName
       });
 
       webStorage.add('cards', cards);

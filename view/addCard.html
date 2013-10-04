@@ -2,7 +2,10 @@
 <form ng-submit="saveCard()">
   <ul class="form-list">
     <li>
-      <input ui-mask="9999 9999 9999 9999" required type="text" ng-model="newCard">
+      <input ui-mask="9999 9999 9999 9999" type="text" ng-model="newCard" required>
+    </li>
+    <li>
+      <input placeholder="Quer dar um nome ao cartão?" type="text" ng-model="cardName">
     </li>
     <li>
       <button class="button" type="submit">salvar</button>

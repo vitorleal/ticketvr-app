@@ -1,9 +1,10 @@
 <div ng-show="cards.length >= 1">
-  <h2>Meus cartões</h2>
+  <h2>Meus cartões <small>({{ cards.length }})</small></h2>
   <ul class="my-cards">
     <li ng-repeat="card in cards">
       <a title="Veja o saldo deste cartão" class="card" ng-click="showBalance(card.number)">
-        <strong>{{ card.number | cardformat }}</strong>
+        <strong ng-show="card.name">{{ card.name }}</strong>
+        <strong ng-hide="card.name">{{ card.number | cardformat }}</strong>
       </a>
       <a class="remove" ng-click="remove($index)">X</a>
     </li>
@@ -12,7 +13,8 @@
 
 <div ng-hide="cards.length >= 1">
   <h2>Você não tem nenhum cartão.</h2>
-  <div class="spacer">
-    <a class="button button-add" href="#/addCard">Adicione um cartão</a>
-  </div>
+</div>
+
+<div class="spacer">
+  <a class="button button-add" href="#/addCard">Adicione um cartão</a>
 </div>

@@ -1,15 +1,12 @@
-html {
+body {
   color: #666;
   font-family: Arial;
   width: 250px;
   border: solid 3px #e31e26;
-  max-height: 201px;
+  min-height: 180px;
+  margin: 0;
 }
 
-body {
-  margin: 0;
-  min-height: 197px;
-}
 
 ul {
   list-style: none;
@@ -84,6 +81,11 @@ form, .spacer {
   text-align: center;
 }
 
+.options-menu {
+  margin-bottom: 0;
+
+}
+
 .options-menu li {
   border-bottom: solid 1px #e5e5e5;
 }
@@ -99,7 +101,7 @@ form, .spacer {
 }
 
 .my-cards {
-  max-height: 78px;
+  max-height: 117px;
   overflow: auto;
 }
 .my-cards li {
