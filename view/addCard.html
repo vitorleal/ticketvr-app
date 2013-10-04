@@ -1,14 +1,15 @@
 <h2>Adicionar cartão</h2>
-<form ng-submit="saveCard()">
+<form no-validate name="addForm" ng-submit="saveCard()">
   <ul class="form-list">
     <li>
       <input ui-mask="9999 9999 9999 9999" type="text" ng-model="newCard" required>
     </li>
     <li>
-      <input placeholder="Quer dar um nome ao cartão?" type="text" ng-model="cardName">
+      <p class="card-name-text">Quer dar um nome ao cartão?</p>
+      <input type="text" ng-model="cardName" maxlength="20">
     </li>
     <li>
-      <button class="button" type="submit">salvar</button>
+      <button ng-disabled="addForm.$invalid" class="button" type="submit">salvar</button>
     </li>
   </ul>
 </form>

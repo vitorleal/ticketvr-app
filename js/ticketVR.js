@@ -78,7 +78,7 @@ app.controller('checkBalance', function($scope, $location) {
 });
 
 
-//Get Balance
+//Show Balance
 app.controller('showBalance', function($scope, $routeParams, $http) {
     var url = 'https://ticketvr.herokuapp.com/card/' + $routeParams.card;
 
@@ -90,13 +90,12 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
           $scope.isLoading = false;
 
           if (data.error) {
-            $scope.error = data.error;
+            $scope.error   = data.error;
           } else {
             $scope.balance = data.balance;
           }
         })
         .error(function (data) {
-          console.log(data);
           $scope.isLoading = false;
         });
     } else {

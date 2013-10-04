@@ -1,11 +1,11 @@
 <h2>Verificar saldo</h2>
-<form ng-submit="checkBalance()" class="form-check">
+<form name="checkForm" ng-submit="checkBalance()" class="form-check">
   <ul class="form-list">
     <li>
       <input required ui-mask="9999 9999 9999 9999" type="text" name="card" ng-model="card">
     </li>
     <li>
-      <button class="button button-check" type="submit">verificar</button>
+      <button ng-disabled="checkForm.$invalid" class="button button-check" type="submit">verificar</button>
     </li>
   </ul>
 </form>

@@ -1,10 +1,11 @@
-body {
+html {
   color: #666;
   font-family: Arial;
-  width: 250px;
+  width: 100%;
   border: solid 3px #e31e26;
-  min-height: 180px;
+  height: 100%;
   margin: 0;
+  -moz-box-sizing: border-box;
 }
 
 
@@ -46,7 +47,7 @@ input[type="text"] {
   padding: 8px;
   text-align: center;
   width: 100%;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 form, .spacer {
@@ -70,7 +71,7 @@ form, .spacer {
   padding: 8px 12px;
   cursor: pointer;
   width: 100%;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .button:hover {
   background: #ad1a20;
@@ -119,6 +120,10 @@ form, .spacer {
 .my-cards .card {
   cursor: pointer;
   display: block;
+}
+
+.card-name-text {
+  margin-bottom: 0;
 }
 
 .remove {
