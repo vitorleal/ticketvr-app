@@ -34,7 +34,7 @@ app.filter('cardformat', function() {
 });
 
 //Initial
-app.controller('index', function($scope, $http, webStorage, $location) {
+app.controller('index', function($scope) {
 
 });
 

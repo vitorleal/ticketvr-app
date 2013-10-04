@@ -81,9 +81,12 @@ form, .spacer {
   text-align: center;
 }
 
+.info {
+  padding: 10px;
+}
+
 .options-menu {
   margin-bottom: 0;
-
 }
 
 .options-menu li {
