@@ -78,7 +78,7 @@ app.controller('checkBalance', function($scope, $location) {
 });
 
 
-//Get Balance
+//Show Balance
 app.controller('showBalance', function($scope, $routeParams, $http) {
     var url = 'https://ticketvr.herokuapp.com/card/' + $routeParams.card;
 
