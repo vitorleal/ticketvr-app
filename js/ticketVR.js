@@ -90,18 +90,18 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
           mozSystem: true
         }
       })
-        .success(function (data, status) {
-          $scope.isLoading = false;
+      .success(function (data, status) {
+        $scope.isLoading = false;
 
-          if (data.error) {
-            $scope.error   = data.error;
-          } else {
-            $scope.balance = data.balance;
-          }
-        })
-        .error(function (data) {
-          $scope.isLoading = false;
-        });
+        if (data.error) {
+          $scope.error   = data.error;
+        } else {
+          $scope.balance = data.balance;
+        }
+      })
+      .error(function (data) {
+        $scope.isLoading = false;
+      });
     } else {
       $scope.isLoading = false;
       $scope.error     = "Sem conexão"
