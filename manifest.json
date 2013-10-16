@@ -16,6 +16,6 @@
     },
     "offline_enabled": false,
     "manifest_version": 2,
-    "version": "0.8",
+    "version": "0.9",
     "permissions": [ "tabs", "http://*/", "https://*/" ]
 }

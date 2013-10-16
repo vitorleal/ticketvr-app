@@ -2,9 +2,15 @@
   <img src="img/loader.gif" alt="" />
 </div>
 
-<div class="balance" ng-hide="error || isLoading" ng-hide="isLoading">
+<div class="box balance" ng-hide="error || isLoading" ng-hide="isLoading">
   <p class="card-number">Cartão: <strong>{{ balance.number | cardformat }}</strong></p>
   <p class="balance-value">R$ <strong>{{ balance.value }}</strong></p>
+</div>
+
+<div ng-repeat="schedual in scheduling" class="box scheduling" ng-show="scheduling" ng-hide="error || isLoading" ng-hide="isLoading">
+  <p class="card-number">Próximo depósito: {{ schedual.date }}</p>
+  <p class="card-number">{{ schedual.description }}</p>
+  <p class="balance-value">R$ <strong>{{ schedual.value }}</strong></p>
 </div>
 
 <div class="error-message" ng-show="error">

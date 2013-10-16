@@ -92,7 +92,8 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
           if (data.error) {
             $scope.error = data.error;
           } else {
-            $scope.balance = data.balance;
+            $scope.balance    = data.balance;
+            $scope.scheduling = data.scheduling;
           }
         })
         .error(function (data) {

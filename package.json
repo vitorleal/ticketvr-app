@@ -1,6 +1,6 @@
 {
   "name": "ticketVR-chrome",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "description": "Chrome extension to chekc you ballance",
   "main": "popup.html",
   "directories": {
