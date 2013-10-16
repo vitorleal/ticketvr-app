@@ -92,14 +92,20 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
       })
       .success(function (data, status) {
         $scope.isLoading = false;
+        alert(status);
 
         if (data.error) {
+          alert(data);
           $scope.error   = data.error;
         } else {
+          alert(data);
           $scope.balance = data.balance;
         }
       })
-      .error(function (data) {
+      .error(function (data, status) {
+        alert(status);
+        alert(data);
+
         $scope.isLoading = false;
       });
     } else {
