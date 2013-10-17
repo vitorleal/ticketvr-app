@@ -1,14 +1,18 @@
 {
     "version": "1.0",
     "name": "Ticket Refeição",
-    "launch_path": "popup.html",
+    "launch_path": "/index.html",
     "description": "Aplicativo para verificar seu saldo do Ticket Refeição e Ticket Alimentação",
     "icons": {
         "16": "/img/icon_16.png",
+        "30": "/img/icon_30.png",
         "32": "/img/icon_32.png",
         "48": "/img/icon_48.png",
+        "60": "/img/icon_60.png",
         "64": "/img/icon_64.png",
-        "128": "/img/icon_128.png"
+        "120": "/img/icon_120.png",
+        "128": "/img/icon_128.png",
+        "256": "/img/icon_256.png"
     },
     "developer": {
         "name": "Vitor Leal",
@@ -16,5 +20,7 @@
     },
     "installs_allowed_from": ["*"],
     "default_locale": "pt-BR",
-    "systemXHR": {}
+    "type": "privileged",
+    "orientation": "portrait",
+    "fullscreen": "true"
 }
