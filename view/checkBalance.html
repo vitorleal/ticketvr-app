@@ -2,10 +2,14 @@
 <form name="checkForm" ng-submit="checkBalance()" class="form-check">
   <ul class="form-list">
     <li>
+      <p class="card-name-text">Número do cartão?</p>
       <input required ui-mask="9999 9999 9999 9999" type="text" name="card" ng-model="card">
     </li>
     <li>
-      <button ng-disabled="checkForm.$invalid" class="button button-check" type="submit">verificar</button>
+      <button ng-disabled="checkForm.$invalid" class="button button-add" type="submit">Verificar</button>
+    </li>
+    <li>
+      <a href="#/" class="button button-add button-cancel">Cancelar</a>
     </li>
   </ul>
 </form>

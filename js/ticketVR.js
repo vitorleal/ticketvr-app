@@ -85,29 +85,21 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
     $scope.isLoading = true;
 
     if (navigator.onLine) {
-      $http.get(url, {
-        headers: {
-          mozSystem: true
-        }
-      })
+      $http.get(url)
       .success(function (data, status) {
         $scope.isLoading = false;
-        alert(status);
 
-        if (data.error) {
-          alert(data);
-          $scope.error   = data.error;
-        } else {
-          alert(data);
-          $scope.balance = data.balance;
-        }
-      })
-      .error(function (data, status) {
-        alert(status);
-        alert(data);
-
-        $scope.isLoading = false;
-      });
+          if (data.error) {
+            $scope.error = data.error;
+          } else {
+            $scope.balance    = data.balance;
+            $scope.scheduling = data.scheduling;
+          }
+        })
+        .error(function (data) {
+          console.log(data);
+          $scope.isLoading = false;
+        });
     } else {
       $scope.isLoading = false;
       $scope.error     = "Sem conexão"

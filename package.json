@@ -1,7 +1,7 @@
 {
-  "name": "ticketVR-chrome",
-  "version": "0.0.6",
-  "description": "Chrome extension to chekc you ballance",
+  "name": "ticketVR-app",
+  "version": "1.0.0",
+  "description": "Aplicativo para verificar seu saldo do Ticket Refeição e Ticket Alimentação",
   "main": "popup.html",
   "directories": {
     "test": "test"

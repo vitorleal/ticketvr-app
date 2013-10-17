@@ -1,5 +1,5 @@
 {
-    "version": "0.8",
+    "version": "1.0",
     "name": "Ticket Refeição",
     "launch_path": "popup.html",
     "description": "Aplicativo para verificar seu saldo do Ticket Refeição e Ticket Alimentação",

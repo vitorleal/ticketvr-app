@@ -1,13 +1,20 @@
 html {
   color: #666;
   font-family: Arial;
+  font-size: 16px;
   width: 100%;
-  border: solid 3px #e31e26;
-  height: 100%;
   margin: 0;
+  padding: 0;
+  height: 100%;
   -moz-box-sizing: border-box;
 }
 
+body {
+  border: solid 3px #e31e26;
+  margin: 0;
+  min-height: 100%;
+  -moz-box-sizing: border-box;
+}
 
 ul {
   list-style: none;
@@ -33,6 +40,7 @@ h2 {
   text-align: center;
   border-bottom: solid 1px #e5e5e5;
   padding-bottom: 5px;
+  margin-bottom: 35px;
 }
 
 a {
@@ -44,6 +52,7 @@ input[type="text"] {
   display: block;
   border: solid 1px rgb(17, 31, 75);;
   border-radius: 5px;
+  font-size: 1.1em;
   padding: 8px;
   text-align: center;
   width: 100%;
@@ -77,9 +86,18 @@ form, .spacer {
   background: #ad1a20;
 }
 .button-add {
+  font-size: 1.1em;
   display: block;
   margin: 20px 0;
   text-align: center;
+}
+
+.button-cancel {
+  background-color: #999;
+  border-color: #666;
+}
+.button-cancel:hover {
+  background-color: #666;
 }
 
 .info {
@@ -92,6 +110,7 @@ form, .spacer {
 
 .options-menu li {
   border-bottom: solid 1px #e5e5e5;
+  font-size: 1.3em;
 }
 
 .options-menu li:hover {
@@ -106,8 +125,9 @@ form, .spacer {
 
 .my-cards li {
   border-bottom: solid 1px #e5e5e5;
+  font-size: 1.3em;
   padding: 10px;
-  position: relative
+  position: relative;
 }
 .my-cards li:hover {
   background: #e5e5e5;
@@ -119,7 +139,7 @@ form, .spacer {
 }
 
 .card-name-text {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 .remove {
@@ -167,20 +187,28 @@ form, .spacer {
   margin-left: -22px;
 }
 
-.balance {
+.box {
   border-radius: 5px;
   padding: 15px 10px;
   text-align: center;
   background: #E5F5FF;
-  margin: 10px;
+  margin: 20px;
   border: 1px solid #1E55E3;
   color: #1E8CE3;
 }
 
+.scheduling {
+  background: #E5FFE7;
+  border-color: #48BE1B;
+  color: #48BE1B;
+  margin-top: 10px;
+}
+
 .balance-value {
-  font-size: 22px;
-  margin-bottom: 0;
+  font-size: 1.9em;
+  margin: 15px 0 0 0;
 }
 .card-number {
-  font-size: 14px;
+  font-size: 1em;
+  margin-top: 0;
 }
