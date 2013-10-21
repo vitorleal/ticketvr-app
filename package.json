@@ -2,7 +2,7 @@
   "name": "ticketVR-app",
   "version": "1.0.1",
   "description": "Aplicativo para verificar seu saldo do Ticket Refeição e Ticket Alimentação",
-  "main": "popup.html",
+  "main": "./index.html",
   "directories": {
     "test": "test"
   },
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vitorleal/ticketvr-chrome-extension.git"
+    "url": "https://github.com/vitorleal/ticketvr-app.git"
   },
   "keywords": [
     "ticket",
@@ -20,7 +20,7 @@
   "author": "Vitor Leal <vitorleal1@gmail.com>",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/vitorleal/ticketvr-chrome-extension/issues"
+    "url": "https://github.com/vitorleal/ticketvr-app/issues"
   },
   "devDependencies": {
     "karma-script-launcher": "~0.1.0",
