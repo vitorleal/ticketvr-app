@@ -2,12 +2,13 @@
   "name": "ticketVR-app",
   "version": "1.0.1",
   "description": "Aplicativo para verificar seu saldo do Ticket Refeição e Ticket Alimentação",
-  "main": "./index.html",
+  "main": "/index.html",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
+    "publish": "zip -r ticketVR-app.zip *"
   },
   "repository": {
     "type": "git",

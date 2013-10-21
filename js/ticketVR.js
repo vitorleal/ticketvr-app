@@ -86,8 +86,8 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
 
     if (navigator.onLine) {
       $http.get(url)
-      .success(function (data, status) {
-        $scope.isLoading = false;
+        .success(function (data, status) {
+          $scope.isLoading = false;
 
           if (data.error) {
             $scope.error = data.error;
@@ -97,7 +97,7 @@ app.controller('showBalance', function($scope, $routeParams, $http) {
           }
         })
         .error(function (data) {
-          console.log(data);
+          $scope.error     = "Erro ao conectar";
           $scope.isLoading = false;
         });
     } else {
