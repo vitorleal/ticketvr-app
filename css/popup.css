@@ -82,7 +82,7 @@ form, .spacer {
   width: 100%;
   -moz-box-sizing: border-box;
 }
-.button:hover {
+.button:active {
   background: #ad1a20;
 }
 .button-add {
@@ -96,7 +96,7 @@ form, .spacer {
   background-color: #999;
   border-color: #666;
 }
-.button-cancel:hover {
+.button-cancel:active {
   background-color: #666;
 }
 
@@ -113,7 +113,7 @@ form, .spacer {
   font-size: 1.3em;
 }
 
-.options-menu li:hover {
+.options-menu li:active {
   background: #e5e5e5;
 }
 
@@ -129,7 +129,7 @@ form, .spacer {
   padding: 10px;
   position: relative;
 }
-.my-cards li:hover {
+.my-cards li:active {
   background: #e5e5e5;
 }
 
@@ -156,7 +156,7 @@ form, .spacer {
   line-height: 6px;
 }
 
-.remove:hover {
+.remove:active {
   background: #ad1a20;
 }
 
