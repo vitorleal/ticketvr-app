@@ -1,4 +1,7 @@
-Ticket VR Chrome Plugin [![Build Status](https://travis-ci.org/vitorleal/ticketvr-chrome-extension.png?branch=master)](https://travis-ci.org/vitorleal/ticketvr-chrome-extension)
-=======================
+#Ticket VR FirefoxOS APP [![Build Status](https://travis-ci.org/vitorleal/ticketvr-app.png?branch=ffos)](https://travis-ci.org/vitorleal/ticketvr-app)
 
-This is a Google Chrome plugin to check your Ticket VR/VA balance.
+This is a FirefoxOS plugin to check your Ticket *Vale Refeição* and *Vale Alimentação* balance.
+
+
+##Download it
+[https://marketplace.firefox.com/app/ticket-refeicao-vr](https://marketplace.firefox.com/app/ticket-refeicao-vr)
