@@ -1,4 +1,8 @@
-Ticket VR Chrome Plugin [![Build Status](https://travis-ci.org/vitorleal/ticketvr-app.png?branch=master)](https://travis-ci.org/vitorleal/ticketvr-app)
-=======================
+#Ticket VR Chrome Plugin [![Build Status](https://travis-ci.org/vitorleal/ticketvr-app.png?branch=master)](https://travis-ci.org/vitorleal/ticketvr-app)
 
-This is a Google Chrome plugin to check your Ticket VR/VA balance.
+Verifique o saldo do seu Ticket Refeição e Ticket Alimentação, de maneira fácil e rápida.
+
+
+
+##Install the app
+Instale o extensão na chrome app store [Instale aqui](https://chrome.google.com/webstore/detail/ticket-refei%C3%A7%C3%A3o/hjbaaednbcofgjhcombfgghkooboifob?utm_source=github) 
