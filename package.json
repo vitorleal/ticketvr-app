@@ -1,6 +1,6 @@
 {
   "name": "ticketVR-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Aplicativo para verificar seu saldo do Ticket Refeição e Ticket Alimentação",
   "main": "/index.html",
   "directories": {
