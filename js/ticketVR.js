@@ -80,7 +80,7 @@ app.controller('checkBalance', function($scope, $location) {
 
 //Show Balance
 app.controller('showBalance', function($scope, $routeParams, $http) {
-    var url = 'https://ticketvr.herokuapp.com/card/' + $routeParams.card;
+    var url = 'http://api.ticketvrapp.com/card/' + $routeParams.card;
 
     $scope.isLoading = true;
 
